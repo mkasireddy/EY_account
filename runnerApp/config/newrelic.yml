@@ -1,7 +1,7 @@
 --- 
 common: 
-  license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
-  app_name: RubyTestApp_Autotest
+  license_key: '<%= EY::Config.get("New Relic", 'license_key') %>'
+  app_name: '<%= Rails.application.class.parent_name %>'
   monitor_mode: true
   developer_mode: false
   log_level: debug
@@ -20,8 +20,8 @@ common:
   agent_enabled: true
   host: staging-collector.newrelic.com
 development: 
-  license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
-  app_name: RubyTestApp_Autotest
+  #license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
+  #app_name: RubyTestApp_Autotest
   monitor_mode: true
   developer_mode: true
   log_level: info
@@ -33,8 +33,8 @@ development:
   agent_enabled: true
   host: staging-collector.newrelic.com
 test: 
-  license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
-  app_name: RubyTestApp_Autotest
+  #license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
+  #app_name: RubyTestApp_Autotest
   monitor_mode: false
   developer_mode: false
   log_level: info
@@ -46,8 +46,8 @@ test:
   agent_enabled: true
   host: staging-collector.newrelic.com
 production: 
-  license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
-  app_name: RubyTestApp_Autotest
+  #license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
+  #app_name: RubyTestApp_Autotest
   monitor_mode: true
   developer_mode: false
   log_level: info
@@ -64,8 +64,8 @@ production:
   #proxy_user: qa
   #proxy_pass: 4maline
 staging: 
-  license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
-  app_name: RubyTestApp_Autotest
+  #license_key: d67afc830dab717fd163bfcb0b8b88423e9a1a3b
+  #app_name: RubyTestApp_Autotest
   monitor_mode: true
   developer_mode: false
   log_level: info
